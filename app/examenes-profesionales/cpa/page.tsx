@@ -350,11 +350,21 @@ function SectionCard({ section }: { section: Section }) {
           <span>Tasa de aprobación: <strong className="text-gray-700">{section.passRate}</strong></span>
         </div>
 
-        <button
-          className={`mt-4 w-full py-2.5 rounded-xl text-sm font-semibold text-center transition-colors ${c.bg} text-white hover:opacity-90`}
-        >
-          Practicar {section.code} →
-        </button>
+        {section.id === "far" ? (
+          <Link
+            href={`/examenes-profesionales/cpa/${section.id}`}
+            className={`mt-4 w-full py-2.5 rounded-xl text-sm font-semibold text-center transition-colors block ${c.bg} text-white hover:opacity-90`}
+          >
+            Practicar {section.code} →
+          </Link>
+        ) : (
+          <button
+            disabled
+            className="mt-4 w-full py-2.5 rounded-xl text-sm font-semibold text-center bg-gray-200 text-gray-400 cursor-not-allowed"
+          >
+            Próximamente
+          </button>
+        )}
       </div>
     </div>
   );

@@ -441,6 +441,219 @@ export const audQuestions: Question[] = [
   },
 ];
 
+export const regQuestions: Question[] = [
+  {
+    id: 1,
+    topic: "Impuesto Individual",
+    text: "For 2024, a single taxpayer has $80,000 of ordinary income. After the standard deduction of $14,600, their taxable income is $65,400. Which marginal tax rate applies to the top dollar of income?",
+    options: [
+      { id: "A", text: "10%" },
+      { id: "B", text: "12%" },
+      { id: "C", text: "22%" },
+      { id: "D", text: "24%" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "For 2024, the 22% bracket for single filers covers taxable income from $47,150 to $100,525. Taxable income of $65,400 falls within this bracket, so the marginal rate on the top dollar is 22%. Remember: the effective (average) tax rate is lower because lower income is taxed at 10% and 12%.",
+  },
+  {
+    id: 2,
+    topic: "Ganancias de Capital",
+    text: "A taxpayer in the 22% ordinary income tax bracket sells stock held for 14 months at a $10,000 gain. What is the applicable federal tax rate on this gain?",
+    options: [
+      { id: "A", text: "0%" },
+      { id: "B", text: "15%" },
+      { id: "C", text: "20%" },
+      { id: "D", text: "22%" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Long-term capital gains (assets held >12 months) are taxed at preferential rates: 0%, 15%, or 20% depending on taxable income. The 15% rate applies to taxpayers in the 22% and 24% ordinary income brackets. The 22% ordinary rate does NOT apply to long-term capital gains.",
+  },
+  {
+    id: 3,
+    topic: "Like-Kind Exchange",
+    text: "Under IRC Section 1031, a taxpayer exchanges a business building (basis $200,000, FMV $500,000) for another building worth $450,000 plus $50,000 cash (boot). How much gain must be recognized?",
+    options: [
+      { id: "A", text: "$0" },
+      { id: "B", text: "$50,000" },
+      { id: "C", text: "$250,000" },
+      { id: "D", text: "$300,000" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "In a like-kind exchange, gain is recognized only to the extent of boot received. Realized gain = $500,000 − $200,000 = $300,000. Boot received = $50,000. Recognized gain = lesser of realized gain or boot = $50,000. The remaining $250,000 of gain is deferred into the basis of the new property.",
+  },
+  {
+    id: 4,
+    topic: "S Corporation",
+    text: "Which of the following would DISQUALIFY a corporation from making an S election?",
+    options: [
+      { id: "A", text: "Having 75 individual shareholders" },
+      { id: "B", text: "Having a nonresident alien as a shareholder" },
+      { id: "C", text: "Having only one class of common stock" },
+      { id: "D", text: "Being incorporated in a U.S. state" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "S corporations cannot have nonresident alien shareholders — all shareholders must be U.S. citizens or resident aliens. Other requirements: ≤100 shareholders, only one class of stock, and must be a domestic corporation. A nonresident alien shareholder immediately terminates the S election.",
+  },
+  {
+    id: 5,
+    topic: "Self-Employment Tax",
+    text: "A self-employed individual has net self-employment income of $100,000. What is the self-employment (SE) tax base used to calculate SE tax?",
+    options: [
+      { id: "A", text: "$100,000" },
+      { id: "B", text: "$92,350" },
+      { id: "C", text: "$85,000" },
+      { id: "D", text: "$107,650" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "The SE tax base is net self-employment income × 92.35% (i.e., 100% − 7.65%). This adjustment reflects that employees don't pay FICA on the employer's share. So: $100,000 × 0.9235 = $92,350. The SE tax rate of 15.3% is then applied to this amount.",
+  },
+  {
+    id: 6,
+    topic: "Impuesto Corporativo",
+    text: "Under the Tax Cuts and Jobs Act (TCJA), the federal corporate income tax rate is:",
+    options: [
+      { id: "A", text: "28% flat rate" },
+      { id: "B", text: "Graduated rates from 15% to 35%" },
+      { id: "C", text: "21% flat rate" },
+      { id: "D", text: "20% flat rate" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "The TCJA (effective January 1, 2018) replaced the prior graduated corporate tax rates (15%–35%) with a flat 21% rate for all C corporations. This is a permanent change under current law.",
+  },
+  {
+    id: 7,
+    topic: "Sociedades (Partnerships)",
+    text: "A partner's outside basis in a partnership is increased by which of the following?",
+    options: [
+      { id: "A", text: "The partner's share of partnership losses" },
+      { id: "B", text: "Cash distributions received from the partnership" },
+      { id: "C", text: "The partner's share of partnership liabilities" },
+      { id: "D", text: "The partner's share of tax-exempt income" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "A partner's outside basis is increased by: contributions, share of income (including tax-exempt), and share of partnership liabilities. Basis is decreased by: distributions, share of losses, and decreases in partnership liabilities. Both C and D increase basis, but only C is a unique feature of partnership taxation — sharing of liabilities is key.",
+  },
+  {
+    id: 8,
+    topic: "Deducciones Individuales",
+    text: "Which of the following is an 'above-the-line' deduction (adjustment to gross income) for individual taxpayers?",
+    options: [
+      { id: "A", text: "Mortgage interest on a primary residence" },
+      { id: "B", text: "Charitable contributions" },
+      { id: "C", text: "Student loan interest paid" },
+      { id: "D", text: "State and local taxes (SALT)" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "Student loan interest (up to $2,500) is an above-the-line deduction under IRC §221, reducing AGI regardless of whether the taxpayer itemizes. Mortgage interest, charitable contributions, and SALT are itemized (below-the-line) deductions available only if the taxpayer itemizes instead of taking the standard deduction.",
+  },
+  {
+    id: 9,
+    topic: "Ética / Circular 230",
+    text: "Under Treasury Circular 230, a CPA who prepares tax returns must exercise due diligence with respect to:",
+    options: [
+      { id: "A", text: "Only positions that are more likely than not to be sustained" },
+      { id: "B", text: "Accuracy of information in returns, documents, and representations" },
+      { id: "C", text: "Reporting all clients with offshore accounts to the IRS" },
+      { id: "D", text: "Auditing the client's financial records before filing" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Circular 230 §10.22 requires practitioners to exercise due diligence in preparing and signing tax returns and documents submitted to the IRS, ensuring accuracy and truthfulness. The CPA is not required to audit the client's records but must make reasonable inquiries when information appears incorrect.",
+  },
+  {
+    id: 10,
+    topic: "Impuesto Individual",
+    text: "A taxpayer who files as 'Head of Household' must meet which requirement?",
+    options: [
+      { id: "A", text: "Be married and file separately from their spouse" },
+      { id: "B", text: "Be unmarried and pay more than half the cost of maintaining a home for a qualifying person" },
+      { id: "C", text: "Have at least two dependent children" },
+      { id: "D", text: "Be a surviving spouse within 2 years of a spouse's death" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Head of Household status requires the taxpayer to be unmarried (or considered unmarried) at year-end, have paid more than 50% of maintaining the home, and have a qualifying person (child, dependent, or certain relatives) who lived in the home for more than half the year. It provides a larger standard deduction and lower rates than Single status.",
+  },
+  {
+    id: 11,
+    topic: "Créditos Fiscales",
+    text: "Which of the following credits is REFUNDABLE, meaning it can result in a tax refund even if the taxpayer owes no tax?",
+    options: [
+      { id: "A", text: "Child and Dependent Care Credit" },
+      { id: "B", text: "American Opportunity Tax Credit (partially)" },
+      { id: "C", text: "Lifetime Learning Credit" },
+      { id: "D", text: "Foreign Tax Credit" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "The American Opportunity Tax Credit (AOTC) is partially refundable — up to 40% ($1,000) of the maximum $2,500 credit is refundable. The Child and Dependent Care, Lifetime Learning, and Foreign Tax Credits are non-refundable (they reduce tax liability to zero but cannot generate a refund).",
+  },
+  {
+    id: 12,
+    topic: "Impuesto Corporativo",
+    text: "A C corporation has $500,000 of taxable income and pays $105,000 in corporate income tax. What deduction is available to shareholders when dividends are distributed?",
+    options: [
+      { id: "A", text: "Shareholders can deduct dividends received" },
+      { id: "B", text: "No deduction — dividends are taxed again at the shareholder level (double taxation)" },
+      { id: "C", text: "Dividends are tax-free to shareholders" },
+      { id: "D", text: "Shareholders receive a foreign tax credit for corporate taxes paid" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "C corporations are subject to double taxation: income is taxed at the corporate level (21%), and dividends distributed to shareholders are taxed again at the individual level (qualified dividend rate: 0%, 15%, or 20%). This is a key distinction from S corporations and partnerships, which are pass-through entities.",
+  },
+  {
+    id: 13,
+    topic: "Ganancias de Capital",
+    text: "Under the 'wash sale' rule (IRC §1091), a taxpayer who sells stock at a loss and repurchases substantially identical stock within 30 days:",
+    options: [
+      { id: "A", text: "Must recognize the loss immediately" },
+      { id: "B", text: "Cannot deduct the loss; it is added to the basis of the new shares" },
+      { id: "C", text: "Can deduct the loss over 5 years" },
+      { id: "D", text: "Must pay ordinary income tax on the loss" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "The wash sale rule disallows the loss if substantially identical securities are purchased within 30 days before or after the sale (61-day window). The disallowed loss is not permanently lost — it is added to the cost basis of the newly acquired shares, deferring the tax benefit until the new shares are sold.",
+  },
+  {
+    id: 14,
+    topic: "Sociedades (Partnerships)",
+    text: "In a general partnership, how are profits and losses allocated if the partnership agreement is silent on the matter?",
+    options: [
+      { id: "A", text: "Equally among all partners" },
+      { id: "B", text: "Based on each partner's capital contribution" },
+      { id: "C", text: "Based on each partner's hours worked" },
+      { id: "D", text: "Based on the managing partner's discretion" },
+    ],
+    correctAnswer: "A",
+    explanation:
+      "Under the Uniform Partnership Act (UPA), if the partnership agreement does not specify an allocation, profits and losses are shared equally regardless of capital contributions or time invested. This default rule can be overridden by express agreement in the partnership agreement.",
+  },
+  {
+    id: 15,
+    topic: "Deducciones Individuales",
+    text: "The Section 179 deduction allows a business to:",
+    options: [
+      { id: "A", text: "Defer income from the sale of business property" },
+      { id: "B", text: "Immediately expense the cost of qualifying business property" },
+      { id: "C", text: "Carry back capital losses to prior tax years" },
+      { id: "D", text: "Exclude gain on the sale of a primary residence" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Section 179 allows businesses to immediately deduct (expense) the full cost of qualifying business property (e.g., equipment, machinery) in the year placed in service, rather than depreciating it over its useful life. For 2024, the deduction limit is $1,220,000, subject to a phase-out when total property placed in service exceeds $3,050,000.",
+  },
+];
+
 export const sections: Record<string, SectionData> = {
   far: {
     code: "FAR",
@@ -451,5 +664,10 @@ export const sections: Record<string, SectionData> = {
     code: "AUD",
     title: "Auditing and Attestation",
     questions: audQuestions,
+  },
+  reg: {
+    code: "REG",
+    title: "Regulation",
+    questions: regQuestions,
   },
 };

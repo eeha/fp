@@ -350,7 +350,7 @@ function SectionCard({ section }: { section: Section }) {
           <span>Tasa de aprobación: <strong className="text-gray-700">{section.passRate}</strong></span>
         </div>
 
-        {(section.id === "far" || section.id === "aud" || section.id === "reg" || section.id === "bar") ? (
+        {["far", "aud", "reg", "bar", "isc", "tcp"].includes(section.id) ? (
           <Link
             href={`/examenes-profesionales/cpa/${section.id}`}
             className={`mt-4 w-full py-2.5 rounded-xl text-sm font-semibold text-center transition-colors block ${c.bg} text-white hover:opacity-90`}

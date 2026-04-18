@@ -867,6 +867,432 @@ export const barQuestions: Question[] = [
   },
 ];
 
+export const iscQuestions: Question[] = [
+  {
+    id: 1,
+    topic: "Controles Generales de TI",
+    text: "IT general controls (ITGCs) differ from application controls in that ITGCs:",
+    options: [
+      { id: "A", text: "Apply to specific transactions within a single application" },
+      { id: "B", text: "Apply across all applications and the overall IT environment" },
+      { id: "C", text: "Are performed manually by accounting staff" },
+      { id: "D", text: "Only address cybersecurity threats" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "IT General Controls (ITGCs) include controls over the IT environment that affect all applications: change management, access controls, computer operations, and program development. Application controls, by contrast, are embedded within specific software and govern input, processing, and output of individual applications.",
+  },
+  {
+    id: 2,
+    topic: "Control de Acceso",
+    text: "The principle of 'least privilege' in access control means:",
+    options: [
+      { id: "A", text: "All users share a single login to simplify administration" },
+      { id: "B", text: "Users are granted only the minimum access rights needed to perform their job" },
+      { id: "C", text: "Privileged accounts are only used by senior management" },
+      { id: "D", text: "Passwords must be changed every 30 days" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "The principle of least privilege limits each user's access to only what is required to perform their specific job functions. This minimizes the attack surface and reduces the risk of accidental or intentional misuse of data. It is a foundational concept in both COSO and COBIT frameworks.",
+  },
+  {
+    id: 3,
+    topic: "Informes SOC",
+    text: "A cloud provider's customers want assurance that the provider's controls over security, availability, and confidentiality are effective over a 12-month period. Which report is most appropriate?",
+    options: [
+      { id: "A", text: "SOC 1 Type I" },
+      { id: "B", text: "SOC 1 Type II" },
+      { id: "C", text: "SOC 2 Type II" },
+      { id: "D", text: "SOC 3" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "SOC 2 reports address the Trust Service Criteria (security, availability, processing integrity, confidentiality, privacy) — relevant for technology and cloud service providers. Type II covers operating effectiveness over a period (typically 6–12 months). SOC 1 relates to controls over financial reporting. SOC 3 is a public summary without detailed testing.",
+  },
+  {
+    id: 4,
+    topic: "Ciberseguridad",
+    text: "In a phishing attack, the attacker's primary objective is to:",
+    options: [
+      { id: "A", text: "Overload servers to cause a denial-of-service" },
+      { id: "B", text: "Exploit software vulnerabilities in the operating system" },
+      { id: "C", text: "Trick users into revealing credentials or installing malware" },
+      { id: "D", text: "Intercept network traffic between two parties" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "Phishing uses deceptive emails, messages, or websites that impersonate trusted entities to trick users into disclosing credentials, clicking malicious links, or installing malware. It is a social engineering attack targeting human behavior rather than technical vulnerabilities. Denial-of-service (A) and man-in-the-middle (D) are separate attack types.",
+  },
+  {
+    id: 5,
+    topic: "Continuidad del Negocio",
+    text: "The Recovery Time Objective (RTO) in a business continuity plan defines:",
+    options: [
+      { id: "A", text: "The maximum amount of data loss measured in time" },
+      { id: "B", text: "The maximum acceptable downtime before systems must be restored" },
+      { id: "C", text: "The frequency of data backups" },
+      { id: "D", text: "The cost of restoring systems after a disaster" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "RTO is the maximum tolerable length of time that a system can be offline after a disruption — it defines how quickly recovery must occur. The Recovery Point Objective (RPO) measures the maximum acceptable data loss (A). Together, RTO and RPO guide backup frequency, redundancy, and disaster recovery strategies.",
+  },
+  {
+    id: 6,
+    topic: "Controles de Aplicación",
+    text: "An edit check that prevents a user from entering letters in a field designated for numeric data is an example of a(n):",
+    options: [
+      { id: "A", text: "Output control" },
+      { id: "B", text: "Input validation control" },
+      { id: "C", text: "IT general control" },
+      { id: "D", text: "Processing control" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Input validation controls (also called edit checks) verify that data entered into a system meets predefined rules before processing — such as data type checks, range checks, and format checks. They are application-level controls that prevent garbage data from entering the system.",
+  },
+  {
+    id: 7,
+    topic: "Gestión de Cambios",
+    text: "A key objective of change management controls in an IT environment is to:",
+    options: [
+      { id: "A", text: "Ensure all system changes are authorized, tested, and documented" },
+      { id: "B", text: "Prevent any changes to production systems" },
+      { id: "C", text: "Allow developers unrestricted access to production environments" },
+      { id: "D", text: "Automate all software updates without human approval" },
+    ],
+    correctAnswer: "A",
+    explanation:
+      "Change management controls ensure that all modifications to IT systems go through a formal process: request, authorization, testing in a non-production environment, documentation, and approved migration to production. Without these controls, unauthorized or untested changes can introduce errors, fraud, or security vulnerabilities.",
+  },
+  {
+    id: 8,
+    topic: "Seguridad de Datos",
+    text: "Data encryption at rest protects against which threat?",
+    options: [
+      { id: "A", text: "SQL injection attacks on a web application" },
+      { id: "B", text: "Unauthorized access to data from stolen physical storage media" },
+      { id: "C", text: "Denial-of-service attacks on the network" },
+      { id: "D", text: "Social engineering attacks targeting employees" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Encryption at rest protects stored data (on hard drives, databases, backups) so that even if physical media is stolen or improperly accessed, the data is unreadable without the decryption key. It does not protect against attacks that exploit application vulnerabilities (SQL injection) or network-level attacks (DoS).",
+  },
+  {
+    id: 9,
+    topic: "Marco COBIT",
+    text: "The COBIT framework is primarily designed to help organizations:",
+    options: [
+      { id: "A", text: "Prepare financial statements under GAAP" },
+      { id: "B", text: "Govern and manage enterprise IT in alignment with business goals" },
+      { id: "C", text: "Comply with Sarbanes-Oxley Section 302 only" },
+      { id: "D", text: "Conduct external audits of public companies" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "COBIT (Control Objectives for Information and Related Technologies), published by ISACA, is a framework for IT governance and management. It helps organizations align IT strategy with business objectives, manage IT-related risks, and demonstrate compliance. It complements COSO for IT-specific controls.",
+  },
+  {
+    id: 10,
+    topic: "Computación en la Nube",
+    text: "In an Infrastructure as a Service (IaaS) cloud model, which of the following remains the customer's responsibility?",
+    options: [
+      { id: "A", text: "Physical data center security" },
+      { id: "B", text: "Network hardware maintenance" },
+      { id: "C", text: "Operating system and application security" },
+      { id: "D", text: "Hypervisor management" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "In IaaS (e.g., AWS EC2, Azure VMs), the cloud provider manages physical infrastructure, networking hardware, and hypervisors. The customer is responsible for everything above the hypervisor layer: OS patching, application security, data, and access management. This is the 'shared responsibility model.'",
+  },
+  {
+    id: 11,
+    topic: "Blockchain",
+    text: "Which characteristic of blockchain technology makes it particularly resistant to data tampering?",
+    options: [
+      { id: "A", text: "Centralized storage on a single secure server" },
+      { id: "B", text: "Each block contains a cryptographic hash of the previous block" },
+      { id: "C", text: "All transactions require approval from a central authority" },
+      { id: "D", text: "Data is stored in plain text for easy verification" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Each block in a blockchain contains a cryptographic hash of the prior block, creating an immutable chain. Altering any block would invalidate all subsequent blocks and require consensus from the majority of the network to accept the change — making tampering computationally infeasible in a distributed network.",
+  },
+  {
+    id: 12,
+    topic: "Privacidad de Datos",
+    text: "The General Data Protection Regulation (GDPR) grants EU residents the right to:",
+    options: [
+      { id: "A", text: "Access, correct, and request erasure of their personal data" },
+      { id: "B", text: "Sell their personal data to third parties" },
+      { id: "C", text: "Exempt themselves from all data collection" },
+      { id: "D", text: "Audit any company that holds their data" },
+    ],
+    correctAnswer: "A",
+    explanation:
+      "GDPR provides EU data subjects with rights including: access to their data, rectification of inaccurate data, erasure ('right to be forgotten'), data portability, and restriction of processing. Companies that violate GDPR face fines up to 4% of annual global revenue or €20 million.",
+  },
+  {
+    id: 13,
+    topic: "Controles Generales de TI",
+    text: "Segregation of duties in an IT environment requires that the same person should NOT perform which combination of roles?",
+    options: [
+      { id: "A", text: "System analyst and end user" },
+      { id: "B", text: "Database administrator and help desk support" },
+      { id: "C", text: "Programmer and operator of the same system in production" },
+      { id: "D", text: "Security administrator and network engineer" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "A key segregation of duties control requires that programmers (who write and modify code) be separated from computer operators (who run production systems). If the same person develops and operates programs, they could introduce unauthorized changes into production without detection.",
+  },
+  {
+    id: 14,
+    topic: "Auditoría de TI",
+    text: "Computer-assisted audit techniques (CAATs) are used by auditors primarily to:",
+    options: [
+      { id: "A", text: "Replace the need for internal controls in IT systems" },
+      { id: "B", text: "Analyze large volumes of data for anomalies and exceptions" },
+      { id: "C", text: "Design new IT systems for the client" },
+      { id: "D", text: "Install security patches on the client's servers" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "CAATs (such as ACL, IDEA, or custom scripts) allow auditors to test 100% of a population rather than a sample, identify duplicates, gaps in sequences, statistical outliers, and unauthorized transactions in large datasets. They enhance audit efficiency and effectiveness without requiring manual review of every transaction.",
+  },
+  {
+    id: 15,
+    topic: "Ciberseguridad",
+    text: "A ransomware attack encrypts an organization's files and demands payment. The MOST effective preventive control is:",
+    options: [
+      { id: "A", text: "Paying the ransom quickly to minimize downtime" },
+      { id: "B", text: "Maintaining regular offsite backups isolated from the main network" },
+      { id: "C", text: "Disabling all internet access permanently" },
+      { id: "D", text: "Installing antivirus software only on executive computers" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Regular, isolated backups are the most effective defense against ransomware because they allow restoration without paying the ransom. Backups must be kept offline or in air-gapped storage; otherwise ransomware can encrypt them too. Other key controls include employee training, email filtering, and endpoint detection.",
+  },
+];
+
+export const tcpQuestions: Question[] = [
+  {
+    id: 1,
+    topic: "Impuesto al Patrimonio (Estate Tax)",
+    text: "For 2024, the federal estate tax exemption (basic exclusion amount) per individual is approximately:",
+    options: [
+      { id: "A", text: "$5,490,000" },
+      { id: "B", text: "$12,920,000" },
+      { id: "C", text: "$13,610,000" },
+      { id: "D", text: "$25,840,000" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "The federal estate tax exemption for 2024 is $13,610,000 per individual (indexed for inflation). Married couples can combine exemptions to shelter up to $27,220,000 via portability. The top estate tax rate is 40%. Note: the TCJA doubled the exemption; it is scheduled to sunset after 2025 to approximately $7 million.",
+  },
+  {
+    id: 2,
+    topic: "Impuesto a Donaciones (Gift Tax)",
+    text: "The annual gift tax exclusion for 2024 allows an individual to give how much per recipient without using their lifetime exemption?",
+    options: [
+      { id: "A", text: "$15,000" },
+      { id: "B", text: "$16,000" },
+      { id: "C", text: "$17,000" },
+      { id: "D", text: "$18,000" },
+    ],
+    correctAnswer: "D",
+    explanation:
+      "The annual gift tax exclusion for 2024 is $18,000 per donor per recipient. A married couple can combine their exclusions (gift splitting) to give $36,000 per recipient per year without reducing the lifetime exemption. Gifts above this amount reduce the donor's lifetime unified credit ($13,610,000 for 2024).",
+  },
+  {
+    id: 3,
+    topic: "Cuentas de Retiro",
+    text: "A taxpayer age 52 wants to make a deductible Traditional IRA contribution for 2024. The maximum contribution allowed is:",
+    options: [
+      { id: "A", text: "$6,500" },
+      { id: "B", text: "$7,000" },
+      { id: "C", text: "$7,500" },
+      { id: "D", text: "$8,000" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "For 2024, the IRA contribution limit is $7,000. Taxpayers age 50 or older can make an additional $1,000 catch-up contribution, for a total of $8,000. Wait — the 2024 limit is $7,000 base + $1,000 catch-up = $8,000 for age 50+. The taxpayer is age 52, so the maximum is $8,000.",
+  },
+  {
+    id: 4,
+    topic: "Deducción QBI",
+    text: "The Section 199A Qualified Business Income (QBI) deduction allows eligible pass-through business owners to deduct up to what percentage of QBI?",
+    options: [
+      { id: "A", text: "10%" },
+      { id: "B", text: "20%" },
+      { id: "C", text: "25%" },
+      { id: "D", text: "30%" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Section 199A (enacted by TCJA) allows owners of pass-through entities (sole proprietorships, partnerships, S corporations) to deduct up to 20% of qualified business income, subject to income limitations and W-2 wage/capital limitations. Specified service trades or businesses (SSTBs) like law and consulting face phase-outs above income thresholds.",
+  },
+  {
+    id: 5,
+    topic: "Impuesto Internacional",
+    text: "A U.S. citizen with a foreign bank account exceeding $10,000 at any point during the year must file:",
+    options: [
+      { id: "A", text: "Form 1116 (Foreign Tax Credit)" },
+      { id: "B", text: "Form 2555 (Foreign Earned Income Exclusion)" },
+      { id: "C", text: "FinCEN Form 114 (FBAR)" },
+      { id: "D", text: "Form 5471 (Foreign Corporation)" },
+    ],
+    correctAnswer: "C",
+    explanation:
+      "The Foreign Bank Account Report (FBAR), filed on FinCEN Form 114, is required for any U.S. person with a financial interest in or signature authority over foreign financial accounts exceeding $10,000 in aggregate value at any point during the calendar year. Penalties for willful non-filing can reach the greater of $100,000 or 50% of account balance.",
+  },
+  {
+    id: 6,
+    topic: "Organizaciones Exentas",
+    text: "A 501(c)(3) organization generates income from an activity unrelated to its tax-exempt purpose. This income is subject to:",
+    options: [
+      { id: "A", text: "No tax — all income of nonprofits is tax-exempt" },
+      { id: "B", text: "Unrelated Business Income Tax (UBIT)" },
+      { id: "C", text: "Capital gains tax at preferential rates" },
+      { id: "D", text: "A 10% excise tax" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Unrelated Business Income Tax (UBIT) applies to income from activities that are regularly carried on, are a trade or business, and are not substantially related to the organization's exempt purpose. This prevents tax-exempt organizations from having an unfair competitive advantage over taxable businesses.",
+  },
+  {
+    id: 7,
+    topic: "Impuesto Alternativo Mínimo (AMT)",
+    text: "The Alternative Minimum Tax (AMT) was designed primarily to ensure that:",
+    options: [
+      { id: "A", text: "All corporations pay at least 21% in federal tax" },
+      { id: "B", text: "High-income taxpayers pay a minimum level of tax despite deductions and preferences" },
+      { id: "C", text: "Self-employed individuals pay both income and SE tax" },
+      { id: "D", text: "Capital gains are taxed at ordinary income rates" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "The AMT was enacted to prevent high-income taxpayers from using legal deductions and tax preferences to eliminate their tax liability entirely. Taxpayers compute tax under both regular and AMT systems and pay the higher amount. The TCJA significantly reduced AMT exposure by raising the exemption amounts.",
+  },
+  {
+    id: 8,
+    topic: "Inversión en Bienes Raíces",
+    text: "Residential rental property placed in service after 1986 is depreciated over how many years using the Modified Accelerated Cost Recovery System (MACRS)?",
+    options: [
+      { id: "A", text: "27.5 years (straight-line)" },
+      { id: "B", text: "39 years (straight-line)" },
+      { id: "C", text: "15 years (150% declining balance)" },
+      { id: "D", text: "5 years (200% declining balance)" },
+    ],
+    correctAnswer: "A",
+    explanation:
+      "Residential rental property is depreciated over 27.5 years using straight-line under MACRS. Commercial real property (e.g., office buildings) is depreciated over 39 years. The shorter 27.5-year life for residential property provides a larger annual deduction and is a key tax advantage of rental real estate investment.",
+  },
+  {
+    id: 9,
+    topic: "Net Investment Income Tax",
+    text: "The Net Investment Income Tax (NIIT) imposes an additional 3.8% tax on investment income for single filers with modified AGI above:",
+    options: [
+      { id: "A", text: "$125,000" },
+      { id: "B", text: "$200,000" },
+      { id: "C", text: "$250,000" },
+      { id: "D", text: "$400,000" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "The NIIT (IRC §1411), enacted as part of the ACA, applies a 3.8% surtax on the lesser of: (1) net investment income (dividends, interest, capital gains, rents), or (2) the excess of MAGI over the threshold ($200,000 for single filers, $250,000 for married filing jointly). This effectively raises the top rate on investment income.",
+  },
+  {
+    id: 10,
+    topic: "Planificación Patrimonial",
+    text: "An irrevocable life insurance trust (ILIT) is used in estate planning primarily to:",
+    options: [
+      { id: "A", text: "Receive an income tax deduction for premiums paid" },
+      { id: "B", text: "Exclude life insurance proceeds from the taxable estate" },
+      { id: "C", text: "Avoid paying gift taxes on annual premiums" },
+      { id: "D", text: "Convert term life insurance to permanent insurance" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "When a life insurance policy is owned by an ILIT rather than the insured, the proceeds are not included in the insured's taxable estate at death. This can save significant estate taxes for large policies. The trust is irrevocable — the insured gives up control of the policy. Annual premium payments to the trust may use the annual gift tax exclusion (Crummey powers).",
+  },
+  {
+    id: 11,
+    topic: "Cuentas de Retiro",
+    text: "Distributions from a Roth IRA are tax-free and penalty-free if the account has been open at least 5 years AND the owner is:",
+    options: [
+      { id: "A", text: "At least age 59½" },
+      { id: "B", text: "At least age 65" },
+      { id: "C", text: "Retired from their primary employer" },
+      { id: "D", text: "A first-time homebuyer" },
+    ],
+    correctAnswer: "A",
+    explanation:
+      "Qualified Roth IRA distributions require two conditions: (1) the 5-year holding period has been met, and (2) the owner is at least age 59½, disabled, deceased, or a first-time homebuyer (up to $10,000 lifetime). Unlike Traditional IRAs, Roth IRAs have no Required Minimum Distributions (RMDs) during the owner's lifetime.",
+  },
+  {
+    id: 12,
+    topic: "Planificación Fiscal Empresarial",
+    text: "A taxpayer sells a business. Allocating more of the purchase price to personal goodwill (vs. corporate goodwill) benefits the seller because:",
+    options: [
+      { id: "A", text: "Personal goodwill is deductible by the buyer immediately" },
+      { id: "B", text: "Personal goodwill is taxed at preferential long-term capital gains rates to the seller" },
+      { id: "C", text: "Personal goodwill avoids state income taxes" },
+      { id: "D", text: "Personal goodwill increases the corporation's basis in assets" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "Personal goodwill — the relationships and reputation attributable to the individual rather than the corporation — is taxed as capital gain (0%/15%/20%) to the selling individual rather than as ordinary income at the corporate level followed by dividend taxation. This can save substantial taxes in a C-Corp asset sale.",
+  },
+  {
+    id: 13,
+    topic: "Impuesto Internacional",
+    text: "The Foreign Earned Income Exclusion (Form 2555) allows qualifying U.S. citizens living abroad to exclude foreign earned income up to approximately:",
+    options: [
+      { id: "A", text: "$80,000" },
+      { id: "B", text: "$100,000" },
+      { id: "C", text: "$120,000" },
+      { id: "D", text: "$126,500" },
+    ],
+    correctAnswer: "D",
+    explanation:
+      "For 2024, the foreign earned income exclusion is $126,500 (indexed annually for inflation). To qualify, the taxpayer must have a tax home in a foreign country and meet either the bona fide residence test or the physical presence test (330 full days in a foreign country during any 12-month period).",
+  },
+  {
+    id: 14,
+    topic: "Inversión en Bienes Raíces",
+    text: "Under the passive activity loss rules (IRC §469), rental real estate losses for a taxpayer who actively participates and has AGI under $100,000 are:",
+    options: [
+      { id: "A", text: "Fully deductible against all income" },
+      { id: "B", text: "Deductible up to $25,000 against non-passive income" },
+      { id: "C", text: "Only deductible against other passive income" },
+      { id: "D", text: "Not deductible under any circumstances" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "The $25,000 rental real estate allowance permits taxpayers who actively participate in rental activities to deduct up to $25,000 of rental losses against non-passive income, provided AGI does not exceed $100,000. The allowance phases out $0.50 for each $1 of AGI between $100,000 and $150,000, eliminating it completely above $150,000.",
+  },
+  {
+    id: 15,
+    topic: "Planificación Patrimonial",
+    text: "A Grantor Retained Annuity Trust (GRAT) is an estate planning tool that allows a grantor to:",
+    options: [
+      { id: "A", text: "Avoid all gift taxes on assets transferred to the trust" },
+      { id: "B", text: "Transfer asset appreciation to heirs at reduced gift tax cost" },
+      { id: "C", text: "Receive a charitable deduction for assets placed in the trust" },
+      { id: "D", text: "Exclude rental income from the taxable estate" },
+    ],
+    correctAnswer: "B",
+    explanation:
+      "A GRAT allows the grantor to transfer assets to a trust, receive fixed annuity payments for a term, and pass any appreciation above the IRS hurdle rate (§7520 rate) to heirs estate-tax-free. If the assets outperform the hurdle rate, the excess passes to beneficiaries with little or no gift tax. GRATs are 'zeroed out' when the annuity is set to return the full present value to the grantor.",
+  },
+];;
+
 export const sections: Record<string, SectionData> = {
   far: {
     code: "FAR",
@@ -887,5 +1313,15 @@ export const sections: Record<string, SectionData> = {
     code: "BAR",
     title: "Business Analysis and Reporting",
     questions: barQuestions,
+  },
+  isc: {
+    code: "ISC",
+    title: "Information Systems and Controls",
+    questions: iscQuestions,
+  },
+  tcp: {
+    code: "TCP",
+    title: "Tax Compliance and Planning",
+    questions: tcpQuestions,
   },
 };
